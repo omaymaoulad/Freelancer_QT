@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Client</class>
+ <widget class="QWidget" name="Client">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>754</width>
+    <height>522</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #f4f6f8;
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>40</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color:rgba(0, 0, 112, 1);
+    font-size: 18pt;
+    font-weight: bold;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    qproperty-alignment: AlignCenter;
+}</string>
+   </property>
+   <property name="text">
+    <string>Client section</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnAddClient">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>140</y>
+     <width>541</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: rgba(0, 0, 112, 1);
+    color: white;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14pt;
+    font-weight: bold;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #2980b9;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Add a new client</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnEditClient">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>260</y>
+     <width>541</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: rgba(0, 0, 112, 1);
+    color: white;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14pt;
+    font-weight: bold;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #2980b9;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Edit client</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnAllClients">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>390</y>
+     <width>541</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: rgba(0, 0, 112, 1);
+    color: white;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14pt;
+    font-weight: bold;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #2980b9;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>All clients</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnBack">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>480</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: white;
+    color : rgba(0, 0, 112, 1);
+    padding: 6px 14px;
+    font-size: 12pt;
+    font-weight: bold;
+    border-radius: 6px;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+}
+
+QPushButton:hover {
+    background-color: #95a5a6;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>&lt;- Back to home</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

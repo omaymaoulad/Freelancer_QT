@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Acceuil</class>
+ <widget class="QWidget" name="Acceuil">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>753</width>
+    <height>515</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #ecf0f1;
+}</string>
+  </property>
+  <widget class="QPushButton" name="btnClients">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>130</y>
+     <width>231</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #2980b9;
+    color: white;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    border: none;
+    min-width: 120px;
+    min-height: 60px;
+}
+
+QPushButton:hover {
+    background-color: #1c5980;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>CLIENTS</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnProjects">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>130</y>
+     <width>241</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #2980b9;
+    color: white;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    border: none;
+    min-width: 120px;
+    min-height: 60px;
+}
+
+QPushButton:hover {
+    background-color: #1c5980;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>PROJECTS</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>300</y>
+     <width>231</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #2980b9;
+    color: white;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    border: none;
+    min-width: 120px;
+    min-height: 60px;
+}
+
+QPushButton:hover {
+    background-color: #1c5980;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>INVOICES</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>300</y>
+     <width>241</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #2980b9;
+    color: white;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    border: none;
+    min-width: 120px;
+    min-height: 60px;
+}
+
+QPushButton:hover {
+    background-color: #1c5980;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>STATISTICS</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>50</y>
+     <width>351</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: rgba(0, 0, 209, 1);
+    font-size: 22px;
+    font-weight: bold;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    qproperty-alignment: AlignCenter;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Welcome to Freelance Manager</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

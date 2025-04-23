@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddProject</class>
+ <widget class="QWidget" name="AddProject">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>750</width>
+    <height>533</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color:#F4FFC3;
+    font-family: 'Segoe UI';
+    font-size: 18px;
+    color: #333;
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>20</y>
+     <width>451</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    font-weight: bold;
+    color:#006769;
+}</string>
+   </property>
+   <property name="text">
+    <string>➕ Add New Project :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>80</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    font-weight: bold;
+    color:#40A578;
+}</string>
+   </property>
+   <property name="text">
+    <string>Client :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>130</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    font-weight: bold;
+    color:#40A578;
+}</string>
+   </property>
+   <property name="text">
+    <string>Project Name :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>180</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    font-weight: bold;
+    color:#40A578;
+}</string>
+   </property>
+   <property name="text">
+    <string>Start Date :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>180</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    font-weight: bold;
+    color:#40A578;
+}</string>
+   </property>
+   <property name="text">
+    <string>End Date :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>260</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    font-weight: bold;
+    color:#40A578;
+}</string>
+   </property>
+   <property name="text">
+    <string>Budget :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>260</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    font-weight: bold;
+    color:#40A578;
+}</string>
+   </property>
+   <property name="text">
+    <string>Status :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>310</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    font-weight: bold;
+    color:#40A578;
+}</string>
+   </property>
+   <property name="text">
+    <string>Description :</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="ClientBox">
+   <property name="geometry">
+    <rect>
+     <x>184</x>
+     <y>80</y>
+     <width>541</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox{
+  background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 13px;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="NameLine">
+   <property name="geometry">
+    <rect>
+     <x>182</x>
+     <y>133</y>
+     <width>541</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+  background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 13px;
+}</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="StartDateLine">
+   <property name="geometry">
+    <rect>
+     <x>179</x>
+     <y>180</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QDateEdit{
+  background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 13px;
+}</string>
+   </property>
+   <property name="calendarPopup">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="EndDateLine">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>180</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QDateEdit{
+  background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 13px;
+}</string>
+   </property>
+   <property name="calendarPopup">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="BudgetBox">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>260</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QDoubleSpinBox{
+  background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 13px;
+}</string>
+   </property>
+   <property name="prefix">
+    <string>$</string>
+   </property>
+   <property name="maximum">
+    <double>1000000000.000000000000000</double>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="StatusBox">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>260</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox{
+  background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 13px;
+}</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="DesctiptionText">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>350</y>
+     <width>371</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextEdit{
+  background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 13px;
+}</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BtnSave">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>450</y>
+     <width>251</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color:#5D8736;
+    color: white;
+    border-radius: 6px;
+    padding: 6px 15px;
+    font-weight: bold;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #65B741;
+}
+
+QPushButton:pressed {
+    background-color:#65B741;
+}</string>
+   </property>
+   <property name="text">
+    <string>Save Project</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="BtnBack">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QToolButton{
+   color: white;
+    background-color:#5D8736;
+    border-radius: 6px;
+    font-weight: bold;
+}
+QToolButton:hover{
+  background-color:#65B741;
+}</string>
+   </property>
+   <property name="text">
+    <string>&lt;--</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

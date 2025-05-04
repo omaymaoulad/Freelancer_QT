@@ -10,6 +10,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
+find_package(Qt6 REQUIRED COMPONENTS Charts Widgets Sql)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Sql)
 
 set(PROJECT_SOURCES
@@ -57,6 +58,15 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         AllProjects.ui
         AllProjects.h
         AllProjects.cpp
+        AddInvoice.ui
+        AddInvoice.h
+        AddInvoice.cpp
+        Statistics.ui
+        Statistics.h
+        Statistics.cpp
+        Forgotpassword.ui
+        Forgotpassword.h
+        Forgotpassword.cpp
 
 
 
@@ -80,7 +90,8 @@ else()
     endif()
 endif()
 
-target_link_libraries(Freelancers PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Sql)
+target_link_libraries(Freelancers PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Sql Qt${QT_VERSION_MAJOR}::Charts)
+
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an

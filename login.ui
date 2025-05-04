@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Login</class>
- <widget class="QWidget" name="Login">
+ <class>btnFogotpassword</class>
+ <widget class="QWidget" name="btnFogotpassword">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -24,7 +24,7 @@
   <widget class="QPushButton" name="btnLogin">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>50</x>
      <y>400</y>
      <width>251</width>
      <height>61</height>
@@ -152,6 +152,42 @@ background-color: rgb(255, 255, 255);
    </property>
    <property name="echoMode">
     <enum>QLineEdit::EchoMode::Password</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnLogin_2">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>400</y>
+     <width>251</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+border-radius:15px;
+
+padding : 0 4px;
+background: rgba(0, 0, 160, 1);
+border -radius:15px;
+color: rgb(255, 255, 255);
+font: 24px;
+}
+QPushButton:hover:!pressed
+
+{
+background:#57cc99;
+}
+
+QPushButton:pressed
+{
+              font-size: 19px;
+              transition: 0.9s; 
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Forgot Password</string>
    </property>
   </widget>
  </widget>

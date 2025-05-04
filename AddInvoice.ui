@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddInvoice</class>
+ <widget class="QWidget" name="AddInvoice">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>756</width>
+    <height>505</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+background-color:rgb(197, 214, 255);
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>10</y>
+     <width>151</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color:rgb(94, 82, 255);
+	font: 9pt &quot;Kristen ITC&quot;;
+    font-weight: bold;
+    font-size: 30px;
+}</string>
+   </property>
+   <property name="text">
+    <string>INVOICE</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboProject">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>100</y>
+     <width>271</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox {
+    border: 2px solid #60D2DC; /* Turquoise clair */
+    border-radius: 5px;
+    padding: 4px;
+    background-color: #FFFFFF;
+    color: #004AAD;
+}
+QComboBox::drop-down {
+    border: none;
+}
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF;
+    selection-background-color: #60D2DC;
+    selection-color: #004AAD;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #004AAD; /* Bleu roi */
+    font-weight: bold;
+    font-size: 14px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Project name :</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="dateIssue">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>150</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QDateEdit {
+    border: 2px solid #60D2DC;
+    border-radius: 5px;
+    padding: 4px;
+    background-color: #FFFFFF;
+    color: #004AAD;
+}
+QDateEdit::drop-down {
+    border: none;
+}</string>
+   </property>
+   <property name="calendarPopup">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="dateDue">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>150</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QDateEdit {
+    border: 2px solid #60D2DC;
+    border-radius: 5px;
+    padding: 4px;
+    background-color: #FFFFFF;
+    color: #004AAD;
+}
+QDateEdit::drop-down {
+    border: none;
+}</string>
+   </property>
+   <property name="calendarPopup">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>150</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #004AAD; /* Bleu roi */
+    font-weight: bold;
+    font-size: 14px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Issue date :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>150</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #004AAD; /* Bleu roi */
+    font-weight: bold;
+    font-size: 14px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Due date :</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="amountBox">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>210</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QDoubleSpinBox {
+    border: 2px solid #60D2DC; /* Bordure turquoise clair */
+    border-radius: 5px;
+    padding: 4px;
+    background-color: #FFFFFF; /* Fond blanc */
+    color: #004AAD; /* Texte bleu roi */
+    font-size: 14px;
+}
+
+QDoubleSpinBox::up-button, QDoubleSpinBox::down-button {
+    background-color: #60D2DC; /* Turquoise clair */
+    subcontrol-origin: border;
+    width: 16px;
+    border: none;
+    border-radius: 2px;
+}
+
+QDoubleSpinBox::up-button:hover, QDoubleSpinBox::down-button:hover {
+    background-color: #C29737; /* Doré au survol */
+}
+</string>
+   </property>
+   <property name="maximum">
+    <double>100000000000.000000000000000</double>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>210</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #004AAD; /* Bleu roi */
+    font-weight: bold;
+    font-size: 14px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Amount :</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="statusBox">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>210</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox {
+    border: 2px solid #60D2DC; /* Turquoise clair */
+    border-radius: 5px;
+    padding: 4px;
+    background-color: #FFFFFF;
+    color: #004AAD;
+}
+QComboBox::drop-down {
+    border: none;
+}
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF;
+    selection-background-color: #60D2DC;
+    selection-color: #004AAD;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>210</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #004AAD; /* Bleu roi */
+    font-weight: bold;
+    font-size: 14px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Status :</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="descriptionText">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>300</y>
+     <width>291</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextEdit {
+    border: 2px solid #60D2DC;
+    border-radius: 5px;
+    padding: 6px;
+    background-color: #FFFFFF;
+    color: #004AAD;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>290</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #004AAD; /* Bleu roi */
+    font-weight: bold;
+    font-size: 14px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Description :</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnCancel">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>440</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color:#004AAD; 
+    color: #FFFFFF;
+	font: 700 9pt &quot;Calisto MT&quot;;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color:rgb(0, 0, 255); /* Bleu légèrement plus foncé au survol */
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>0</y>
+     <width>111</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="resources.qrc">:/images/K.jpg</pixmap>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnSave">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>440</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color:#004AAD; 
+    color: #FFFFFF;
+	font: 700 9pt &quot;Calisto MT&quot;;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color:rgb(0, 0, 255); /* Bleu légèrement plus foncé au survol */
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

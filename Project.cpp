@@ -11,11 +11,6 @@ Project::Project(QWidget *parent)
     , ui(new Ui::Project)
 {
     ui->setupUi(this);
-
-    // Connexions manuelles (au cas où les noms de slot ne correspondent pas au nom des objets)
-    connect(ui->btnAddProject, &QPushButton::clicked, this, &Project::on_btnAddProject_clicked);
-    connect(ui->btnEditProject, &QPushButton::clicked, this, &Project::on_btnEditProject_clicked);
-    connect(ui->btnProjectList, &QPushButton::clicked, this, &Project::on_btnProjectList_clicked);
 }
 
 Project::~Project()

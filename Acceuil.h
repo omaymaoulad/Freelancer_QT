@@ -16,6 +16,8 @@ public:
 private slots :
     void on_btnClients_clicked();
     void on_btnProjects_clicked();
+    void on_btnInovice_clicked();
+    void on_btnStatistics_clicked();
 private:
     Ui::Acceuil *ui;
 };

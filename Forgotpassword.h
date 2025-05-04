@@ -1,0 +1,4 @@
+#ifndef FORGOTPASSWORD_H
+#define FORGOTPASSWORD_H
+
+#endif // FORGOTPASSWORD_H

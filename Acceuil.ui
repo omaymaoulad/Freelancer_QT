@@ -82,7 +82,7 @@ QPushButton:hover {
     <string>PROJECTS</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="btnInovice">
    <property name="geometry">
     <rect>
      <x>60</x>
@@ -114,7 +114,7 @@ QPushButton:hover {
     <string>INVOICES</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_4">
+  <widget class="QPushButton" name="btnStatistics">
    <property name="geometry">
     <rect>
      <x>440</x>

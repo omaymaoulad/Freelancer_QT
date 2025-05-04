@@ -10,6 +10,7 @@
 	"INPUTS" : 
 	[
 		"D:/Freelancers/images/client.jpg",
+		"D:/Freelancers/images/K.jpg",
 		"D:/Freelancers/images/background.jpg"
 	],
 	"LOCK_FILE" : "D:/Freelancers/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/CMakeFiles/Freelancers_autogen.dir/AutoRcc_resources_EWIEGA46WW_Lock.lock",

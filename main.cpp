@@ -46,6 +46,15 @@ int main(int argc, char *argv[]) {
                 "budget REAL,"
                 "status TEXT,"
                 "FOREIGN KEY (client_id) REFERENCES clients(id))");
+    query.exec("CREATE TABLE IF NOT EXISTS invoices ("
+               "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+               "project_id INTEGER NOT NULL,"
+               "issue_date DATE,"
+               "due_date DATE,"
+               "amount REAL,"
+               "status TEXT,"
+               "description TEXT,"
+               "FOREIGN KEY (project_id) REFERENCES projects(id))");
 
     if (query.lastError().isValid()) {
         qDebug() << "Erreur lors de la création des tables :" << query.lastError().text();

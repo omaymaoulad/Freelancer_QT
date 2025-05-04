@@ -30,13 +30,13 @@ public:
     {
         if (Project->objectName().isEmpty())
             Project->setObjectName("Project");
-        Project->resize(716, 491);
+        Project->resize(775, 511);
         Project->setStyleSheet(QString::fromUtf8("QWidget {\n"
 "    background-color: #F2F4F5;\n"
 "}"));
         btnAddProject = new QPushButton(Project);
         btnAddProject->setObjectName("btnAddProject");
-        btnAddProject->setGeometry(QRect(250, 50, 321, 81));
+        btnAddProject->setGeometry(QRect(250, 50, 411, 81));
         btnAddProject->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #1ABC9C;\n"
 "    color: white;\n"
@@ -54,7 +54,7 @@ public:
 ""));
         btnEditProject = new QPushButton(Project);
         btnEditProject->setObjectName("btnEditProject");
-        btnEditProject->setGeometry(QRect(250, 190, 321, 81));
+        btnEditProject->setGeometry(QRect(250, 190, 411, 81));
         btnEditProject->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #1ABC9C;\n"
 "    color: white;\n"
@@ -72,7 +72,7 @@ public:
 ""));
         btnProjectList = new QPushButton(Project);
         btnProjectList->setObjectName("btnProjectList");
-        btnProjectList->setGeometry(QRect(250, 330, 321, 81));
+        btnProjectList->setGeometry(QRect(250, 330, 411, 81));
         btnProjectList->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #1ABC9C;\n"
 "    color: white;\n"

@@ -11,11 +11,6 @@ Client::Client(QWidget *parent)
     , ui(new Ui::Client)
 {
     ui->setupUi(this);
-
-    // Connect manual slots (if not using auto-slot naming)
-    connect(ui->btnAddClient, &QPushButton::clicked, this, &Client::on_btnAddClient_clicked);
-    connect(ui->btnEditClient, &QPushButton::clicked, this, &Client::on_btnEditClient_clicked);
-    connect(ui->btnAllClients, &QPushButton::clicked, this, &Client::on_btnAllClients_clicked);
 }
 
 Client::~Client() {
@@ -23,10 +18,10 @@ Client::~Client() {
 }
 
 void Client::on_btnAddClient_clicked() {
-    this->hide();  // ou this->close(); si tu veux vraiment la fermer
-    AddClient *add = new AddClient();  // 👈 pas de parent ici
-    add->setAttribute(Qt::WA_DeleteOnClose); // nettoie à la fermeture
-    add->show();  // On cache au lieu de fermer
+
+    AddClient *add = new AddClient();
+    add->show();
+    this->hide();
 }
 
 void Client::on_btnEditClient_clicked() {

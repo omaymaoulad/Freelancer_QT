@@ -22,8 +22,8 @@ class Ui_Acceuil
 public:
     QPushButton *btnClients;
     QPushButton *btnProjects;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_4;
+    QPushButton *btnInovice;
+    QPushButton *btnStatistics;
     QLabel *label;
 
     void setupUi(QWidget *Acceuil)
@@ -74,10 +74,10 @@ public:
 "    background-color: #1c5980;\n"
 "}\n"
 ""));
-        pushButton_3 = new QPushButton(Acceuil);
-        pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setGeometry(QRect(60, 300, 231, 101));
-        pushButton_3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        btnInovice = new QPushButton(Acceuil);
+        btnInovice->setObjectName("btnInovice");
+        btnInovice->setGeometry(QRect(60, 300, 231, 101));
+        btnInovice->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #2980b9;\n"
 "    color: white;\n"
 "    border-radius: 10px;\n"
@@ -94,10 +94,10 @@ public:
 "    background-color: #1c5980;\n"
 "}\n"
 ""));
-        pushButton_4 = new QPushButton(Acceuil);
-        pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setGeometry(QRect(440, 300, 241, 101));
-        pushButton_4->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        btnStatistics = new QPushButton(Acceuil);
+        btnStatistics->setObjectName("btnStatistics");
+        btnStatistics->setGeometry(QRect(440, 300, 241, 101));
+        btnStatistics->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #2980b9;\n"
 "    color: white;\n"
 "    border-radius: 10px;\n"
@@ -136,8 +136,8 @@ public:
         Acceuil->setWindowTitle(QCoreApplication::translate("Acceuil", "Form", nullptr));
         btnClients->setText(QCoreApplication::translate("Acceuil", "CLIENTS", nullptr));
         btnProjects->setText(QCoreApplication::translate("Acceuil", "PROJECTS", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("Acceuil", "INVOICES", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("Acceuil", "STATISTICS", nullptr));
+        btnInovice->setText(QCoreApplication::translate("Acceuil", "INVOICES", nullptr));
+        btnStatistics->setText(QCoreApplication::translate("Acceuil", "STATISTICS", nullptr));
         label->setText(QCoreApplication::translate("Acceuil", "Welcome to Freelance Manager", nullptr));
     } // retranslateUi
 

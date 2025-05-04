@@ -6,7 +6,7 @@
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QMessageBox>
-
+#include <QDebug>
 AddClient::AddClient(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::AddClient)
@@ -87,7 +87,6 @@ void AddClient::on_btnBack_clicked() {
     Client *client = new Client();
     client->show();
     this->close();
-
 }
 void AddClient::on_btnCancel_clicked()
 {

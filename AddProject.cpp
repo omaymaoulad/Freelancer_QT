@@ -4,13 +4,14 @@
 #include <QSqlError>
 #include <QMessageBox>
 #include "Project.h"
-
+#include "global.h"
+extern int CURRENT_USER_ID;
 AddProject::AddProject(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::AddProject)
 {
     ui->setupUi(this);
-    loadClients(); // Chargement des noms de clients
+    loadClients();
     ui->StatusBox->addItems({"Planned", "In Progress", "Completed", "Cancelled"});
 }
 
@@ -21,7 +22,15 @@ AddProject::~AddProject()
 
 void AddProject::loadClients()
 {
-    QSqlQuery query("SELECT id, name FROM clients");
+    QSqlQuery query;
+    query.prepare("SELECT id, name FROM clients WHERE user_id = :user_id");
+    query.bindValue(":user_id", CURRENT_USER_ID);
+
+    if (!query.exec()) {
+        QMessageBox::critical(this, "Error", "Failed to load clients: " + query.lastError().text());
+        return;
+    }
+
     while (query.next()) {
         int id = query.value(0).toInt();
         QString name = query.value(1).toString();

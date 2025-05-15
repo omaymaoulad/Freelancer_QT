@@ -458,6 +458,7 @@
 			"EWIEGA46WW/moc_Statistics.cpp",
 			null
 		],
+		[ "D:/Freelancers/global.h", "MU", "EWIEGA46WW/moc_global.cpp", null ],
 		[ "D:/Freelancers/login.h", "MU", "EWIEGA46WW/moc_login.cpp", null ],
 		[
 			"D:/Freelancers/mainwindow.h",
@@ -563,6 +564,7 @@
 		[ "D:/Freelancers/Forgotpassword.cpp", "MU", null ],
 		[ "D:/Freelancers/Project.cpp", "MU", null ],
 		[ "D:/Freelancers/Statistics.cpp", "MU", null ],
+		[ "D:/Freelancers/global.cpp", "MU", null ],
 		[ "D:/Freelancers/login.cpp", "MU", null ],
 		[ "D:/Freelancers/main.cpp", "MU", null ],
 		[ "D:/Freelancers/mainwindow.cpp", "MU", null ],

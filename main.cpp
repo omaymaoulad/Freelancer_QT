@@ -18,8 +18,8 @@ int main(int argc, char *argv[]) {
         return -1;
     }
 
-    // Créer la table utilisateurs si elle n'existe pas
     QSqlQuery query;
+    query.exec("PRAGMA foreign_keys = ON;");
     query.exec("CREATE TABLE IF NOT EXISTS utilisateurs ("
                "id INTEGER PRIMARY KEY AUTOINCREMENT,"
                "nom TEXT NOT NULL,"
@@ -35,7 +35,9 @@ int main(int argc, char *argv[]) {
                "company TEXT,"
                "client_type TEXT,"
                "notes TEXT NULL,"
-               "created_at DATETIME DEFAULT CURRENT_TIMESTAMP)");
+               "created_at DATETIME DEFAULT CURRENT_TIMESTAMP)"
+               "user_id INTEGER,"
+               "FOREIGN KEY(user_id) REFERENCES utilisateurs(id) ON DELETE CASCADE)");
     query.exec("CREATE TABLE IF NOT EXISTS projects ("
                 "id INTEGER PRIMARY KEY AUTOINCREMENT,"
                 "client_id INTEGER NOT NULL,"

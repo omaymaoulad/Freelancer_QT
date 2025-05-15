@@ -1,6 +1,8 @@
 #include "login.h"
 #include "ui_login.h"
+#include "Forgotpassword.h"
 #include "Acceuil.h"
+#include "global.h"
 #include <QSqlQuery>
 #include <QMessageBox>
 #include <QSqlDatabase>
@@ -37,6 +39,7 @@ void Login::on_btnLogin_clicked() {
     }
 
     if (query.next()) {
+        CURRENT_USER_ID = query.value("id").toInt();
         Acceuil *acceuil = new Acceuil();
         qDebug() << "Connexion réussie. Ouverture de la page Acceuil...";
         acceuil->show();
@@ -44,4 +47,9 @@ void Login::on_btnLogin_clicked() {
     } else {
         QMessageBox::warning(this, "Error", "Incorrect email or password.");
     }
+}
+void Login::on_btnForgetPassword_clicked(){
+    Forgotpassword *forget = new Forgotpassword();
+    forget->show();
+    this->close();
 }

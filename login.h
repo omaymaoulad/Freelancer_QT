@@ -1,7 +1,6 @@
 #ifndef LOGIN_H
 #define LOGIN_H
 #include <QWidget>
-#include "ui_login.h"
 namespace Ui {
     class Login;
 }
@@ -15,6 +14,7 @@ public:
 
 private slots:
     void on_btnLogin_clicked();
+    void on_btnForgetPassword_clicked();
 
 private:
     Ui::Login *ui;

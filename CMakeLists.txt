@@ -18,60 +18,72 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+
+        login.cpp
+        login.h
+        login.ui
+
+        register.cpp
+        register.h
+        register.ui
+
+        Acceuil.cpp
+        Acceuil.h
+        Acceuil.ui
+
+        Client.cpp
+        Client.h
+        Client.ui
+
+        AddClient.cpp
+        AddClient.h
+        AddClient.ui
+
+        EditClient.cpp
+        EditClient.h
+        EditClient.ui
+
+        AllClients.cpp
+        AllClients.h
+        AllClient.ui
+
+        Project.cpp
+        Project.h
+        Project.ui
+
+        AddProject.cpp
+        AddProject.h
+        AddProject.ui
+
+        EditProject.cpp
+        EditProject.h
+        EditProject.ui
+
+        AllProjects.cpp
+        AllProjects.h
+        AllProjects.ui
+
+        AddInvoice.cpp
+        AddInvoice.h
+        AddInvoice.ui
+
+        Statistics.cpp
+        Statistics.h
+        Statistics.ui
+
+
+        Forgotpassword.cpp
+        Forgotpassword.h
+        Forgotpassword.ui
+
+        resources.qrc
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(Freelancers
-        MANUAL_FINALIZATION
-        ${PROJECT_SOURCES}
-        login.ui
-        login.h
-        login.cpp
-        register.ui
-        register.h
-        register.cpp
-        Acceuil.ui
-        Acceuil.h
-        Acceuil.cpp
-        Client.ui
-        Client.h
-        Client.cpp
-        Project.ui
-        Project.h
-        Project.cpp
-        resources.qrc
-        AddClient.ui
-        AddClient.h
-        AddClient.cpp
-        EditClient.ui
-        EditClient.h
-        EditClient.cpp
-        AllClient.ui
-        AllClients.h
-        AllClients.cpp
-        AddProject.ui
-        AddProject.h
-        AddProject.cpp
-        EditProject.ui
-        EditProject.h
-        EditProject.cpp
-        AllProjects.ui
-        AllProjects.h
-        AllProjects.cpp
-        AddInvoice.ui
-        AddInvoice.h
-        AddInvoice.cpp
-        Statistics.ui
-        Statistics.h
-        Statistics.cpp
-        Forgotpassword.ui
-        Forgotpassword.h
-        Forgotpassword.cpp
+  qt_add_executable(Freelancers ${PROJECT_SOURCES}
+    global.h
+    global.cpp )
 
-
-
-
-    )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Freelancers APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
 #                 ${CMAKE_CURRENT_SOURCE_DIR}/android)

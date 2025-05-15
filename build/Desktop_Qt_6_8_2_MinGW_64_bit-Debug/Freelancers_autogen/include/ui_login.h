@@ -27,26 +27,27 @@ public:
     QLabel *label_2;
     QLabel *label_3;
     QLineEdit *linePassword;
+    QPushButton *btnForgetPassword;
 
     void setupUi(QWidget *Login)
     {
         if (Login->objectName().isEmpty())
             Login->setObjectName("Login");
-        Login->resize(727, 517);
-        Login->setStyleSheet(QString::fromUtf8("background: qlineargradient(\n"
-"    x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"    stop: 0 white,\n"
-"    stop: 1 white\n"
-");\n"
+        Login->resize(733, 510);
+        Login->setStyleSheet(QString::fromUtf8("QWidget {\n"
+"    background-image: url(:/images/log.jpg);\n"
+"    background-repeat: no-repeat;\n"
+"    background-size: cover;\n"
+"}\n"
 ""));
         btnLogin = new QPushButton(Login);
         btnLogin->setObjectName("btnLogin");
-        btnLogin->setGeometry(QRect(250, 400, 251, 61));
+        btnLogin->setGeometry(QRect(50, 400, 251, 61));
         btnLogin->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "border-radius:15px;\n"
 "\n"
 "padding : 0 4px;\n"
-"background: rgba(0, 0, 160, 1);\n"
+"background:#002366;\n"
 "border -radius:15px;\n"
 "color: rgb(255, 255, 255);\n"
 "font: 24px;\n"
@@ -74,24 +75,24 @@ public:
 "}"));
         label = new QLabel(Login);
         label->setObjectName("label");
-        label->setGeometry(QRect(50, 240, 91, 20));
+        label->setGeometry(QRect(50, 230, 121, 31));
         label->setStyleSheet(QString::fromUtf8("QLabel{\n"
-"font-size:18px;\n"
-"color :rgba(0, 0, 160, 1);\n"
+"font-size:25px;\n"
+"color :#1A1A1A;\n"
 "}"));
         label_2 = new QLabel(Login);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(50, 330, 91, 20));
+        label_2->setGeometry(QRect(40, 320, 131, 31));
         label_2->setStyleSheet(QString::fromUtf8("QLabel{\n"
-"font-size:18px;\n"
-"color :rgba(0, 0, 160, 1);\n"
+"font-size:25px;\n"
+"color :#1A1A1A;\n"
 "}"));
         label_3 = new QLabel(Login);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(240, 100, 241, 41));
         label_3->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "font-size: 35px;\n"
-"color:rgba(0, 0, 160, 1);\n"
+"color:#002366;\n"
 "backround-color:white;\n"
 "}"));
         linePassword = new QLineEdit(Login);
@@ -104,6 +105,30 @@ public:
 "	font: 18px;\n"
 "}"));
         linePassword->setEchoMode(QLineEdit::EchoMode::Password);
+        btnForgetPassword = new QPushButton(Login);
+        btnForgetPassword->setObjectName("btnForgetPassword");
+        btnForgetPassword->setGeometry(QRect(400, 400, 251, 61));
+        btnForgetPassword->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"border-radius:15px;\n"
+"\n"
+"padding : 0 4px;\n"
+"background: #002366;\n"
+"border -radius:15px;\n"
+"color: rgb(255, 255, 255);\n"
+"font: 24px;\n"
+"}\n"
+"QPushButton:hover:!pressed\n"
+"\n"
+"{\n"
+"background:#57cc99;\n"
+"}\n"
+"\n"
+"QPushButton:pressed\n"
+"{\n"
+"              font-size: 19px;\n"
+"              transition: 0.9s; \n"
+"}\n"
+""));
 
         retranslateUi(Login);
 
@@ -117,6 +142,7 @@ public:
         label->setText(QCoreApplication::translate("Login", "Email    :", nullptr));
         label_2->setText(QCoreApplication::translate("Login", "Password :", nullptr));
         label_3->setText(QCoreApplication::translate("Login", "Welcome Back!", nullptr));
+        btnForgetPassword->setText(QCoreApplication::translate("Login", "Forgot Password", nullptr));
     } // retranslateUi
 
 };

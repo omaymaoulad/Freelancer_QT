@@ -2,6 +2,7 @@
 #include "ui_register.h"
 #include "login.h"
 #include "Acceuil.h"
+#include "global.h"
 #include <QSqlQuery>
 #include <QMessageBox>
 #include <QDebug>
@@ -41,6 +42,7 @@ void Register::on_btnCreateAccount_clicked() {
     query.bindValue(":mdp", mdp);
 
     if (query.exec()) {
+        CURRENT_USER_ID = query.value("id").toInt();
         Acceuil *acc = new Acceuil();
         acc->show();
         this->close();

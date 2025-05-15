@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>btnFogotpassword</class>
- <widget class="QWidget" name="btnFogotpassword">
+ <class>Login</class>
+ <widget class="QWidget" name="Login">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>727</width>
-    <height>517</height>
+    <width>733</width>
+    <height>510</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background: qlineargradient(
-    x1: 0, y1: 0, x2: 0, y2: 1,
-    stop: 0 white,
-    stop: 1 white
-);
+   <string notr="true">QWidget {
+    background-image: url(:/images/log.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 </string>
   </property>
   <widget class="QPushButton" name="btnLogin">
@@ -35,7 +35,7 @@
 border-radius:15px;
 
 padding : 0 4px;
-background: rgba(0, 0, 160, 1);
+background:#002366;
 border -radius:15px;
 color: rgb(255, 255, 255);
 font: 24px;
@@ -79,15 +79,15 @@ background-color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>240</y>
-     <width>91</width>
-     <height>20</height>
+     <y>230</y>
+     <width>121</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel{
-font-size:18px;
-color :rgba(0, 0, 160, 1);
+font-size:25px;
+color :#1A1A1A;
 }</string>
    </property>
    <property name="text">
@@ -97,16 +97,16 @@ color :rgba(0, 0, 160, 1);
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>330</y>
-     <width>91</width>
-     <height>20</height>
+     <x>40</x>
+     <y>320</y>
+     <width>131</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel{
-font-size:18px;
-color :rgba(0, 0, 160, 1);
+font-size:25px;
+color :#1A1A1A;
 }</string>
    </property>
    <property name="text">
@@ -125,7 +125,7 @@ color :rgba(0, 0, 160, 1);
    <property name="styleSheet">
     <string notr="true">QLabel{
 font-size: 35px;
-color:rgba(0, 0, 160, 1);
+color:#002366;
 backround-color:white;
 }</string>
    </property>
@@ -154,7 +154,7 @@ background-color: rgb(255, 255, 255);
     <enum>QLineEdit::EchoMode::Password</enum>
    </property>
   </widget>
-  <widget class="QPushButton" name="btnLogin_2">
+  <widget class="QPushButton" name="btnForgetPassword">
    <property name="geometry">
     <rect>
      <x>400</x>
@@ -168,7 +168,7 @@ background-color: rgb(255, 255, 255);
 border-radius:15px;
 
 padding : 0 4px;
-background: rgba(0, 0, 160, 1);
+background: #002366;
 border -radius:15px;
 color: rgb(255, 255, 255);
 font: 24px;

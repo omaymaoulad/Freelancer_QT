@@ -14,7 +14,12 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: white;
+   <string notr="true">QWidget {
+    background-image: url(:/images/log.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 </string>
   </property>
   <widget class="QFrame" name="frame">
@@ -40,8 +45,8 @@
      <rect>
       <x>150</x>
       <y>250</y>
-      <width>101</width>
-      <height>31</height>
+      <width>131</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -49,7 +54,7 @@
 border-radius:15px;
 
 padding : 0 4px;
-background: rgba(0, 0, 160, 1);
+background:#002366;
 border -radius:15px;
 color: rgb(255, 255, 255);
 font: 24px;
@@ -81,11 +86,12 @@ QPushButton:pressed
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #f2f2f2;
-border: none;
-border-radius: 5px;
-padding: 8px;
-font-size: 14px;
+     <string notr="true">QLineEdit{
+background-color: rgb(255, 255, 255);
+	 border: 2px  solid;
+     border-radius: 4px;
+	font: 18px;
+}
 </string>
     </property>
    </widget>
@@ -99,11 +105,12 @@ font-size: 14px;
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #f2f2f2;
-border: none;
-border-radius: 5px;
-padding: 8px;
-font-size: 14px;
+     <string notr="true">QLineEdit{
+background-color: rgb(255, 255, 255);
+	 border: 2px  solid;
+     border-radius: 4px;
+	font: 18px;
+}
 </string>
     </property>
    </widget>
@@ -117,12 +124,12 @@ font-size: 14px;
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #f2f2f2;
-border: none;
-border-radius: 5px;
-padding: 8px;
-font-size: 14px;
-</string>
+     <string notr="true">QLineEdit{
+background-color: rgb(255, 255, 255);
+	 border: 2px  solid;
+     border-radius: 4px;
+	font: 18px;
+}</string>
     </property>
     <property name="echoMode">
      <enum>QLineEdit::EchoMode::Password</enum>
@@ -131,15 +138,15 @@ font-size: 14px;
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>80</y>
+      <x>30</x>
+      <y>70</y>
       <width>61</width>
-      <height>16</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font-size: 15px;
-color:rgba(0, 0, 160, 1);
+     <string notr="true">font-size: 18px;
+color:#002366;
 backround-color:white ;</string>
     </property>
     <property name="text">
@@ -151,13 +158,14 @@ backround-color:white ;</string>
      <rect>
       <x>38</x>
       <y>140</y>
-      <width>51</width>
+      <width>61</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font-size: 15px;
-color:rgba(0, 0, 160, 1);</string>
+     <string notr="true">font-size: 18px;
+color:#002366;
+backround-color:white ;</string>
     </property>
     <property name="text">
      <string>Email :</string>
@@ -166,15 +174,16 @@ color:rgba(0, 0, 160, 1);</string>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>10</x>
       <y>200</y>
-      <width>71</width>
+      <width>91</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:rgba(0, 0, 160, 1);
-font-size: 15px;</string>
+     <string notr="true">font-size: 18px;
+color:#002366;
+backround-color:white ;</string>
     </property>
     <property name="text">
      <string>Password :</string>

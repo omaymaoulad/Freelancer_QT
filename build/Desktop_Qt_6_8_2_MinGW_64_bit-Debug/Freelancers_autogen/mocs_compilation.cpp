@@ -8,6 +8,7 @@
 #include "EWIEGA46WW/moc_Client.cpp"
 #include "EWIEGA46WW/moc_EditClient.cpp"
 #include "EWIEGA46WW/moc_EditProject.cpp"
+#include "EWIEGA46WW/moc_Forgotpassword.cpp"
 #include "EWIEGA46WW/moc_Project.cpp"
 #include "EWIEGA46WW/moc_Statistics.cpp"
 #include "EWIEGA46WW/moc_login.cpp"

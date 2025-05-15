@@ -1,11 +1,12 @@
 #include "AllProjects.h"
 #include "ui_AllProjects.h"
 #include "Project.h"
+#include "global.h"
 #include <QSqlQuery>
 #include <QSqlQueryModel>
 #include <QSqlError>
 #include <QMessageBox>
-
+extern int CURRENT_USER_ID;
 AllProjects::AllProjects(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::AllProjects)
@@ -22,19 +23,31 @@ AllProjects::~AllProjects()
 
 void AllProjects::loadProjects(const QString &filter)
 {
-    QString queryStr = "SELECT name, client_id, start_date, end_date, budget, status, description FROM projects";
+    QSqlQuery query;
+    QString sql = R"(
+        SELECT p.name, c.name AS client_name, p.start_date, p.end_date, p.budget, p.status, p.description
+        FROM projects p
+        JOIN clients c ON p.client_id = c.id
+        WHERE c.user_id = :user_id
+    )";
     if (!filter.isEmpty()) {
-        queryStr += " WHERE name LIKE '%" + filter + "%'";
+        sql += " AND p.name LIKE :filter";
     }
 
-    model->setQuery(queryStr);
-    if (model->lastError().isValid()) {
-        QMessageBox::critical(this, "SQL Error", model->lastError().text());
+    query.prepare(sql);
+    query.bindValue(":user_id", CURRENT_USER_ID);
+    if (!filter.isEmpty()) {
+        query.bindValue(":filter", "%" + filter + "%");
     }
 
+    if (!query.exec()) {
+        QMessageBox::critical(this, "SQL Error", query.lastError().text());
+        return;
+    }
+
+    model->setQuery(query);
     ui->tableClients->setModel(model);
 }
-
 void AllProjects::on_lineSearch_textChanged(const QString &text)
 {
     loadProjects(text);

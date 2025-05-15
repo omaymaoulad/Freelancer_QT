@@ -1,12 +1,14 @@
 #include "AddClient.h"
 #include "ui_AddClient.h"
 #include "Client.h"
+#include "global.h"
 #include <QLocale>
 #include <QSet>
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QMessageBox>
 #include <QDebug>
+extern int CURRENT_USER_ID;
 AddClient::AddClient(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::AddClient)
@@ -14,7 +16,6 @@ AddClient::AddClient(QWidget *parent)
     ui->setupUi(this);
     qDebug() << "AddClient window opened.";
 
-    // Remplir comboBoxCountry automatiquement avec les noms de pays via QLocale 🌍
     QSet<QString> uniqueCountries;
     const auto locales = QLocale::matchingLocales(
         QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry
@@ -27,10 +28,10 @@ AddClient::AddClient(QWidget *parent)
     }
 
     QStringList sortedCountries = uniqueCountries.values();
-    sortedCountries.sort(Qt::CaseInsensitive); // Trie alphabétique
+    sortedCountries.sort(Qt::CaseInsensitive);
     ui->comboBoxCountry->addItems(sortedCountries);
 
-    // Remplir comboBoxType avec les types de clients
+
     ui->comboBoxType->addItems({
         "Individual",
         "Business",
@@ -63,8 +64,8 @@ void AddClient::on_btnSave_clicked()
 
     QSqlQuery query;
     query.prepare(R"(
-        INSERT INTO clients (name, email, phone, address, country, company, client_type, notes)
-        VALUES (:name, :email, :phone, :address, :country, :company, :client_type, :notes)
+        INSERT INTO clients (name, email, phone, address, country, company, client_type, notes, user_id)
+        VALUES (:name, :email, :phone, :address, :country, :company, :client_type, :notes, :user_id)
     )");
 
     query.bindValue(":name", name);
@@ -75,10 +76,13 @@ void AddClient::on_btnSave_clicked()
     query.bindValue(":company", company);
     query.bindValue(":client_type", type);
     query.bindValue(":notes", notes);
-
+    query.bindValue(":user_id", CURRENT_USER_ID);
     if (query.exec()) {
         QMessageBox::information(this, "Success", "Client saved into database.");
     } else {
+        qDebug() << "Query failed:" << query.lastQuery();
+        qDebug() << "Bound values:" << query.boundValues();
+        qDebug() << "Error:" << query.lastError().text();
         QMessageBox::critical(this, "Insert Error", query.lastError().text());
     }
 }
@@ -92,5 +96,5 @@ void AddClient::on_btnCancel_clicked()
 {
     Client *client = new Client();
     client->show();
-    this->close(); // Ferme la fenêtre actuelle
+    this->close();
 }

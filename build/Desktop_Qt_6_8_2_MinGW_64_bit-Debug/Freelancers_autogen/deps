@@ -615,6 +615,8 @@ Freelancers_autogen/timestamp: \
 	D:/Freelancers/EditClient.h \
 	D:/Freelancers/EditProject.cpp \
 	D:/Freelancers/EditProject.h \
+	D:/Freelancers/Forgotpassword.cpp \
+	D:/Freelancers/Forgotpassword.h \
 	D:/Freelancers/Project.cpp \
 	D:/Freelancers/Project.h \
 	D:/Freelancers/Statistics.cpp \
@@ -624,6 +626,8 @@ Freelancers_autogen/timestamp: \
 	D:/Freelancers/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
 	D:/Freelancers/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake \
 	D:/Freelancers/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/Freelancers_autogen/moc_predefs.h \
+	D:/Freelancers/global.cpp \
+	D:/Freelancers/global.h \
 	D:/Freelancers/login.cpp \
 	D:/Freelancers/login.h \
 	D:/Freelancers/main.cpp \
@@ -640,6 +644,7 @@ Freelancers_autogen/timestamp: \
 	D:/Freelancers/Client.ui \
 	D:/Freelancers/EditClient.ui \
 	D:/Freelancers/EditProject.ui \
+	D:/Freelancers/Forgotpassword.ui \
 	D:/Freelancers/Project.ui \
 	D:/Freelancers/Statistics.ui \
 	D:/Freelancers/allclient.ui \

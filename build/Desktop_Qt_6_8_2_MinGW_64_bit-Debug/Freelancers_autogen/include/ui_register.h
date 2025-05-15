@@ -37,7 +37,12 @@ public:
         if (Register->objectName().isEmpty())
             Register->setObjectName("Register");
         Register->resize(720, 499);
-        Register->setStyleSheet(QString::fromUtf8("background-color: white;\n"
+        Register->setStyleSheet(QString::fromUtf8("QWidget {\n"
+"    background-image: url(:/images/log.jpg);\n"
+"    background-repeat: no-repeat;\n"
+"    background-size: cover;\n"
+"}\n"
+"\n"
 ""));
         frame = new QFrame(Register);
         frame->setObjectName("frame");
@@ -47,12 +52,12 @@ public:
         frame->setFrameShadow(QFrame::Shadow::Raised);
         btnCreateAccount = new QPushButton(frame);
         btnCreateAccount->setObjectName("btnCreateAccount");
-        btnCreateAccount->setGeometry(QRect(150, 250, 101, 31));
+        btnCreateAccount->setGeometry(QRect(150, 250, 131, 41));
         btnCreateAccount->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "border-radius:15px;\n"
 "\n"
 "padding : 0 4px;\n"
-"background: rgba(0, 0, 160, 1);\n"
+"background:#002366;\n"
 "border -radius:15px;\n"
 "color: rgb(255, 255, 255);\n"
 "font: 24px;\n"
@@ -72,47 +77,51 @@ public:
         lineNom = new QLineEdit(frame);
         lineNom->setObjectName("lineNom");
         lineNom->setGeometry(QRect(110, 70, 211, 31));
-        lineNom->setStyleSheet(QString::fromUtf8("background-color: #f2f2f2;\n"
-"border: none;\n"
-"border-radius: 5px;\n"
-"padding: 8px;\n"
-"font-size: 14px;\n"
+        lineNom->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
+"background-color: rgb(255, 255, 255);\n"
+"	 border: 2px  solid;\n"
+"     border-radius: 4px;\n"
+"	font: 18px;\n"
+"}\n"
 ""));
         lineEmail = new QLineEdit(frame);
         lineEmail->setObjectName("lineEmail");
         lineEmail->setGeometry(QRect(110, 130, 211, 31));
-        lineEmail->setStyleSheet(QString::fromUtf8("background-color: #f2f2f2;\n"
-"border: none;\n"
-"border-radius: 5px;\n"
-"padding: 8px;\n"
-"font-size: 14px;\n"
+        lineEmail->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
+"background-color: rgb(255, 255, 255);\n"
+"	 border: 2px  solid;\n"
+"     border-radius: 4px;\n"
+"	font: 18px;\n"
+"}\n"
 ""));
         linePassword = new QLineEdit(frame);
         linePassword->setObjectName("linePassword");
         linePassword->setGeometry(QRect(110, 190, 211, 31));
-        linePassword->setStyleSheet(QString::fromUtf8("background-color: #f2f2f2;\n"
-"border: none;\n"
-"border-radius: 5px;\n"
-"padding: 8px;\n"
-"font-size: 14px;\n"
-""));
+        linePassword->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
+"background-color: rgb(255, 255, 255);\n"
+"	 border: 2px  solid;\n"
+"     border-radius: 4px;\n"
+"	font: 18px;\n"
+"}"));
         linePassword->setEchoMode(QLineEdit::EchoMode::Password);
         label = new QLabel(frame);
         label->setObjectName("label");
-        label->setGeometry(QRect(40, 80, 61, 16));
-        label->setStyleSheet(QString::fromUtf8("font-size: 15px;\n"
-"color:rgba(0, 0, 160, 1);\n"
+        label->setGeometry(QRect(30, 70, 61, 21));
+        label->setStyleSheet(QString::fromUtf8("font-size: 18px;\n"
+"color:#002366;\n"
 "backround-color:white ;"));
         label_2 = new QLabel(frame);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(38, 140, 51, 20));
-        label_2->setStyleSheet(QString::fromUtf8("font-size: 15px;\n"
-"color:rgba(0, 0, 160, 1);"));
+        label_2->setGeometry(QRect(38, 140, 61, 20));
+        label_2->setStyleSheet(QString::fromUtf8("font-size: 18px;\n"
+"color:#002366;\n"
+"backround-color:white ;"));
         label_3 = new QLabel(frame);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(30, 200, 71, 20));
-        label_3->setStyleSheet(QString::fromUtf8("color:rgba(0, 0, 160, 1);\n"
-"font-size: 15px;"));
+        label_3->setGeometry(QRect(10, 200, 91, 20));
+        label_3->setStyleSheet(QString::fromUtf8("font-size: 18px;\n"
+"color:#002366;\n"
+"backround-color:white ;"));
         label_4 = new QLabel(frame);
         label_4->setObjectName("label_4");
         label_4->setGeometry(QRect(80, 10, 251, 41));
